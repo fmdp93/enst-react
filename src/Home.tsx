@@ -1,4 +1,5 @@
 import Header from './components/Nav'
+import Row2 from './components/home/Row2';
 
 const Home = () => {
     return (
@@ -19,6 +20,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <Row2></Row2>
         </div>
     );
 }
