@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
     return (
         <header>
@@ -10,13 +12,13 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="navbarToggler">
                         <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link" href="index.php">Home</a>
+                                <Link to="/" className="nav-link">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="contacts.php">Contacts</a>
+                                <Link to="/contacts" className="nav-link">Contacts</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="sitemap.php">Sitemap</a>
+                                <Link to="/sitemap" className="nav-link">Sitemap</Link>
                             </li>
                         </ul>
                     </div>
