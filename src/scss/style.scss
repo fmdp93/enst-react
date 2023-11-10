@@ -101,7 +101,7 @@ body {
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: $nav-wrapper-height-xs auto auto;
-        background: url("/img/1080p bg.jpg");
+        background: url("../assets/img/1080p bg.jpg");
         background-attachment: fixed;
         background-size: 100% 100%;
         background-repeat: no-repeat;
@@ -296,7 +296,7 @@ $side-icon-size: 84px;
     }
 
     .col-1-bg {
-        background: url("/img/row-2-col-1.jpg");
+        background: url("../assets/img/row-2-col-1.jpg");
         background-size: 100% 100%;
         background-repeat: no-repeat;
         height: 100%;
@@ -319,7 +319,7 @@ $side-icon-size: 84px;
     }
 
     .col-2-bg {
-        background: url("/img/row-2-col-2.jpg");
+        background: url("../assets/img/row-2-col-2.jpg");
         background-size: 100% 100%;
         background-repeat: no-repeat;
         height: 100%;
