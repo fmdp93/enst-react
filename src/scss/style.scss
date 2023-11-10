@@ -1,0 +1,549 @@
+$colors: (
+    primary: #1df11d,
+    nav-bg-color: #61bf0d,
+    text-color-1: #fff,
+    text-color-2: #fff,
+    bg-color-1: #b5d280,
+    bg-color-2: #5fe610,
+    bg-color-3: #d9e488,
+    bg-color-4: #0e1c0a,
+    title-bg: RGBa(61, 99, 40, 0.5),
+    home-bg-overlay: #69b500,
+    button-bg-color: #7ef814,
+    button-text-color: #0e1c0a,
+    light-green-1: #5fe610,
+    light-green-2: #8ee630,
+    light-green-3: #aaff7f,
+    dark-green-1: #24481a,
+    row-6-item-1: #558a16,
+    row-6-item-2: #afc614,
+    row-6-item-3: #6cac00,
+    row-6-item-4: #69b500,
+    row-6-item-5: #619010,
+    row-6-item-6: #cbe162,
+    row-6-item-7: #6ca500,
+    row-6-item-8: #70ab01,
+    row-6-item-9: #629a01,
+    row-6-item-10: #cbe162,
+);
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+@mixin sm {
+    @media (min-width: $sm) {
+        @content;
+    }
+}
+@mixin md {
+    @media (min-width: $md) {
+        @content;
+    }
+}
+@mixin lg {
+    @media (min-width: $lg) {
+        @content;
+    }
+}
+@mixin xl {
+    @media (min-width: $xl) {
+        @content;
+    }
+}
+
+$nav-wrapper-height-xs: 60px;
+$nav-wrapper-height-md: 100px;
+$site-title-text-shadow: 4px 0px 1px #000;
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("/font/Gilroy-Light.otf");
+}
+
+@font-face {
+    font-family: "Papyrus";
+    src: url("/font/Papyrus.ttf");
+}
+
+html {
+    background: rgb(36,72,26);
+background: linear-gradient(90deg, rgba(36,72,26,1) 0%, rgba(105,181,0,1) 40%, rgba(105,181,0,1) 60%, rgba(36,72,26,1) 100%);
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "Gilroy";
+}
+
+.green-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: map-get($colors, bg-color-2);
+    opacity: 0.5;
+}
+
+.enst-home-container .row-1 {
+    .nav-wrapper nav {
+        box-shadow: none;
+    }
+}
+
+.enst-home-container {
+    width: 100%;
+    height: 100%;
+    .row-1 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: $nav-wrapper-height-xs auto auto;
+        background: url("/img/1080p bg.jpg");
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height: 100%;
+
+        @include md {
+            grid-template-rows: $nav-wrapper-height-md 50% auto;
+        }
+
+        div:nth-of-type(2) {
+            grid-area: 2 / 1 / 3 / 3;
+            width: 100%;
+
+            .item-wrapper {
+                display: table;
+                height: 100%;
+                width: 100%;
+                vertical-align: bottom;
+                #site-title {
+                    display: table-cell;
+                    height: 100%;
+                    width: 100%;
+                    text-align: center;
+                    vertical-align: bottom;
+                    color: #fff;
+                    font-family: "Papyrus", sans-serif;
+                    div {
+                        display: block;
+                        position: relative;
+
+                        @include md {
+                            width: 80%;
+                            margin: 0 auto;
+                            text-align: center;
+                        }
+
+                        @include lg {
+                            width: 60%;
+                        }
+
+                        @include xl {
+                            width: 50%;
+                        }
+                        h1 {
+                            font-size: 4em;
+                            letter-spacing: 0.1em;
+                            @include sm {
+                                font-size: 5em;
+                            }
+                        }
+
+                        h2 {
+                            font-size: 1.5em;
+                            @include sm {
+                                font-size: 2em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-wrapper {
+        background: none;
+    }
+}
+
+.nav-wrapper {
+    grid-area: 1 / 1 / 2 / 3;
+    font-size: 1.5em;
+    height: $nav-wrapper-height-xs;
+    background: map-get($colors, nav-bg-color);
+    @include md {
+        height: $nav-wrapper-height-md;
+    }
+
+    nav {
+        text-align: center;
+        background: map-get($colors, nav-bg-color);
+        z-index: 99;
+        // box-shadow: 0px 0px 10px #000;
+        @include sm {
+            background: none;
+            height: 100%;
+        }
+    }
+
+    nav div .navbar-nav li {
+        @include sm {
+            width: 5em;
+        }
+
+        @include md {
+            width: 7em;
+        }
+    }
+    .navbar-brand:link,
+    .navbar-brand:visited {
+        font-family: "Papyrus", sans-serif;
+        text-shadow: $site-title-text-shadow;
+        color: #fff;
+        @include sm {
+            width: 7em;
+        }
+    }
+    .nav-link:link,
+    .nav-link:visited {
+        color: #fff;
+    }
+    .nav-link:hover,
+    .nav-link:active {
+        color: #fff !important;
+        font-weight: bold;
+    }
+}
+
+.home-row-2-heading {
+    z-index: 3;
+    h2 {
+        font-size: 2em;
+        @include sm {
+            font-size: 3em;
+        }
+    }
+    ul li {
+        font-size: 1.25em;
+        @include sm {
+            font-size: 1.5em;
+        }
+    }
+}
+
+$side-icon-size: 84px;
+#side-icon {
+    background: #0e1c0a;
+    border-radius: 50%;
+    height: $side-icon-size;
+    width: $side-icon-size;
+    line-height: $side-icon-size;
+    text-align: center;
+    font-size: 2.5em;
+    color: #558a16;
+    margin: 0 auto;
+}
+.navbar-brand:link,
+.navbar-brand:visited {
+    font-size: 1.35em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+#map-wrapper {
+    position: relative;
+    height: 0;
+}
+
+#map-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.row-4 {
+    background: map-get($colors, bg-color-4);
+    div {
+        text-align: center;
+    }
+    button.call-us-now {
+        background: #fff;
+        font-size: 1.5em;
+        width: 90%;
+        @include sm {
+            width: 55%;
+        }
+
+        @include md {
+            width: 45%;
+        }
+    }
+    button.call-us-now a:link,
+    button.call-us-now a:visited {
+        color: map-get($colors, button-text-color);
+    }
+}
+
+.row-2 {
+    color: #fff;
+    & > .row > div {
+        aspect-ratio: 16 / 9;
+    }
+
+    .col-1-bg {
+        background: url("/img/row-2-col-1.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+    .col-1-bg-overlay {
+        background: map-get($colors, light-green-1);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.8;
+        z-index: 2;
+    }
+
+    .col-2-bg {
+        background: url("/img/row-2-col-2.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+    .col-2-bg-overlay {
+        background: map-get($colors, light-green-2);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.8;
+        z-index: 2;
+    }
+}
+
+.row-3 > div > div {
+    background: #fff;
+    text-align: center;
+}
+
+.row-5 {
+    max-width: 1366px;
+    margin: 0 auto;
+
+    .content-1 {
+        h2 {
+            font-size: 1.75em;
+            @include lg {
+                font-size: 2em;
+            }
+        }
+        ul li {
+            margin: 3% auto;
+            font-size: 1.25em;
+        }
+        strong {
+            font-size: 1.25em;
+        }
+    }
+    .content-2 {
+        h2 {
+            font-size: 1.5em;
+            @include sm {
+                font-size: 2em;
+            }
+            @include md {
+                font-size: 2.5em;
+            }
+            @include lg {
+                font-size: 3em;
+            }
+        }
+
+        ol li {
+            padding: 2.5% 0;
+            font-size: 1em;
+            @include sm {
+                font-size: 1.25em;
+            }
+            @include md {
+                font-size: 1.5em;
+                padding: 1% 0;
+            }
+            @include lg {
+                font-size: 2em;
+            }
+        }
+    }
+}
+
+.row-6 {
+    max-width: 1366px;
+    margin: 0 auto;
+
+    .grid {
+        display: grid;
+        width: 100%;
+        grid-template-columns: auto;
+        grid-template-rows: auto repeat(8, 300px) auto;
+
+        @include sm {
+            grid-template-columns: auto auto;
+            grid-template-rows: auto 300px 300px 300px 300px auto;
+        }
+
+        @include md {
+        }
+
+        @include lg {
+            grid-template-columns: auto auto auto;
+            grid-template-rows: repeat(4, auto);
+        }
+
+        @include xl {
+            grid-template-columns: repeat(12, 8.33%);
+            grid-template-rows: repeat(4, auto);
+            grid-template-areas:
+                "item1 item1 item1 item1 item1 item1 item1 item1 item10 item10 item10 item10"
+                "item2 item2 item2 item2 item3 item3 item3 item3 item10 item10 item10 item10"
+                "item4 item4 item4 item4 item5 item5 item5 item5 item10 item10 item10 item10"
+                "item6 item6 item6 item7 item7 item7 item8 item8 item8 item9 item9 item9";
+        }
+
+        .item:nth-of-type(1) {
+            background: map-get($colors, row-6-item-1);
+            @include sm {
+                grid-column: 1 / span 2;
+            }
+
+            @include xl {
+                grid-area: item1;
+            }
+        }
+        .item:nth-of-type(10) {
+            background: map-get($colors, row-6-item-10);
+            @include sm {
+                grid-column: 1 / span 2;
+            }
+            @include lg {
+                grid-column: 2 / span 2;
+            }
+            @include xl {
+                grid-area: item10;
+            }
+            h3 {
+                font-size: 2em;
+                @include sm {
+                    font-size: 3em;
+                }
+            }
+            strong {
+                font-size: 1.25em;
+                @include lg {
+                    font-size: 1.5em;
+                }
+            }
+            ul li {
+                display: inline-block;
+                width: auto;
+                vertical-align: middle;
+                @include lg {
+                    padding: 3% auto;
+                }
+            }
+            ul li:nth-of-type(2n + 1) {
+                font-size: 2.5em;
+                width: 50px;
+
+                @include xl {
+                    font-size: 3em;
+                }
+            }
+
+            ul li:nth-of-type(2n + 2) {
+                font-size: 1.25em;
+                @include xl {
+                    font-size: 1.5em;
+                }
+            }
+        }
+        .item:nth-of-type(2) {
+            background: map-get($colors, row-6-item-2);
+            @include xl {
+                grid-area: item2;
+            }
+        }
+        .item:nth-of-type(3) {
+            background: map-get($colors, row-6-item-3);
+            @include xl {
+                grid-area: item3;
+            }
+        }
+        .item:nth-of-type(4) {
+            background: map-get($colors, row-6-item-4);
+            @include xl {
+                grid-area: item4;
+            }
+        }
+        .item:nth-of-type(5) {
+            background: map-get($colors, row-6-item-5);
+            @include xl {
+                grid-area: item5;
+            }
+        }
+        .item:nth-of-type(6) {
+            background: map-get($colors, row-6-item-6);
+            @include xl {
+                grid-area: item6;
+            }
+        }
+        .item:nth-of-type(7) {
+            background: map-get($colors, row-6-item-7);
+            @include xl {
+                grid-area: item7;
+            }
+        }
+        .item:nth-of-type(8) {
+            background: map-get($colors, row-6-item-8);
+            @include xl {
+                grid-area: item8;
+            }
+        }
+        .item:nth-of-type(9) {
+            background: map-get($colors, row-6-item-9);
+            @include xl {
+                grid-area: item9;
+            }
+        }
+    }
+}
+
+#contact-us{
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+#site-map{
+    max-width: 1366px;
+    margin: 0 auto;
+}
