@@ -1,5 +1,9 @@
-const  = () => {
-    return (  );
+const Header = () => {
+    return (
+        <header>
+
+        </header>
+    );
 }
- 
-export default ;
+
+export default Header;
