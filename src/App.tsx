@@ -1,4 +1,3 @@
-import Header from './components/Header'
 import './css/reset.css'
 import './css/bootstrap.min.css'
 import './scss/style.scss'
@@ -10,9 +9,6 @@ import Sitemap from './Sitemap'
 function App() {
   return (
     <BrowserRouter basename='/'>
-      <div className="enst">
-        <Header></Header>
-      </div>
       <main>
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
