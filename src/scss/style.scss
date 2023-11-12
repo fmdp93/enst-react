@@ -73,7 +73,7 @@ background: linear-gradient(90deg, rgba(36,72,26,1) 0%, rgba(105,181,0,1) 40%, r
 }
 
 html,
-body {
+body, #root, main {    
     height: 100%;
     font-family: "Gilroy";
 }
