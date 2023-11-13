@@ -9,4 +9,7 @@ export default defineConfig({
   css: {
     devSourcemap: true,
   },
+  build: {
+    outDir: "./public"
+  }
 })
