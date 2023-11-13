@@ -1,26 +1,15 @@
-import Header from './components/Nav'
-
 const Home = () => {
     const home_row_2_heading = "home-row-2-heading col-12 col-lg-10 py-5 pl-sm-5 mx-auto";
     const hr2h_li = "py-3 pl-5";
 
     return (
         <div className="enst-home-container">
-            <div className="green-bg-overlay">
+            {/* <div className="green-bg-overlay">
 
-            </div>
-            <div className="grid row-1">
-                <Header></Header>
-                <div className="item mx-auto">
-                    <div className="item-wrapper">
-                        <div id="site-title">
-                            <div className="p-4">
-                                <h1>ENST</h1>
-                                <h2>Etheric Nerve Stimulation Treatment</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            </div> */}
+            <div className="row-1" id="hero">
+                <h1>ENST</h1>
+                <h2>Etheric Nerve Stimulation Treatment</h2>
             </div>
             <div className="container-fluid row-2">
                 <div className="row">
