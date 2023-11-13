@@ -68,13 +68,13 @@ $site-title-text-shadow: 4px 0px 1px #000;
 }
 
 html {
-    background: rgb(36, 72, 26);
+    background: rgb(18, 45, 10);
     background: linear-gradient(
         90deg,
-        rgba(36, 72, 26, 1) 0%,
-        rgba(105, 181, 0, 1) 40%,
-        rgba(105, 181, 0, 1) 60%,
-        rgba(36, 72, 26, 1) 100%
+        rgba(18, 45, 10, 1) 0%,
+        rgba(38, 62, 5, 1) 40%,
+        rgba(38, 62, 5, 1) 60%,
+        rgba(18, 45, 10, 1) 100%
     );
 }
 
@@ -110,7 +110,7 @@ main {
         grid-template-columns: 50% 50%;
         grid-template-rows: $nav-wrapper-height-xs auto auto;
         height: 100%;
-        
+
         background-image: url("../assets/img/1080p bg.jpg");
         background-size: cover;
         height: 100%;
@@ -125,7 +125,6 @@ main {
     }
 }
 
-
 #hero {
     color: #fff;
     font-family: "Papyrus", sans-serif;
@@ -134,8 +133,8 @@ main {
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    
-    @include md{
+
+    @include md {
         margin-top: -$nav-wrapper-height-md;
     }
     h1 {
@@ -334,6 +333,7 @@ $side-icon-size: 84px;
 .row-5 {
     max-width: 1366px;
     margin: 0 auto;
+    background-color: #fff;
 
     .content-1 {
         h2 {
