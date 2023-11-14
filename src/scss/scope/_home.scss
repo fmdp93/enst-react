@@ -1,0 +1,352 @@
+.green-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: map-get($colors, bg-color-2);
+    opacity: 0.5;
+}
+
+.enst-home-container {
+    width: 100%;
+    height: 100%;
+    .row-1 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: $nav-wrapper-height-xs auto auto;
+        height: 100%;
+
+        background-image: url("../assets/img/1080p bg.jpg");
+        background-size: cover;
+        height: 100%;
+        background-blend-mode: hard-light;
+
+        @include md {
+            grid-template-rows: $nav-wrapper-height-md 50% auto;
+        }
+    }
+    .nav-wrapper {
+        background: none;
+    }
+    .row-1 .nav-wrapper nav {
+        box-shadow: none;
+    }
+
+    .row-4 {
+        background: map-get($colors, bg-color-4);
+        div {
+            text-align: center;
+        }
+        button.call-us-now {
+            background: #fff;
+            font-size: 1.5em;
+            width: 90%;
+            @include sm {
+                width: 55%;
+            }
+
+            @include md {
+                width: 45%;
+            }
+        }
+        button.call-us-now a:link,
+        button.call-us-now a:visited {
+            color: map-get($colors, button-text-color);
+        }
+    }
+
+    .row-2 {
+        color: #fff;
+        & > .row > div {
+            aspect-ratio: 16 / 9;
+        }
+
+        .col-1-bg {
+            background: url("../assets/img/row-2-col-1.jpg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+        .col-1-bg-overlay {
+            background: map-get($colors, light-green-1);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.8;
+            z-index: 2;
+        }
+
+        .col-2-bg {
+            background: url("../assets/img/row-2-col-2.jpg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+        .col-2-bg-overlay {
+            background: map-get($colors, light-green-2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.8;
+            z-index: 2;
+        }
+    }
+
+    .row-3 > div > div {
+        background: #fff;
+        text-align: center;
+    }
+
+    .row-5 {
+        max-width: 1366px;
+        margin: 0 auto;
+        background-color: #fff;
+
+        .content-1 {
+            h2 {
+                font-size: 1.75em;
+                @include lg {
+                    font-size: 2em;
+                }
+            }
+            ul li {
+                margin: 3% auto;
+                font-size: 1.25em;
+            }
+            strong {
+                font-size: 1.25em;
+            }
+        }
+        .content-2 {
+            h2 {
+                font-size: 1.5em;
+                @include sm {
+                    font-size: 2em;
+                }
+                @include md {
+                    font-size: 2.5em;
+                }
+                @include lg {
+                    font-size: 3em;
+                }
+            }
+
+            ol li {
+                padding: 2.5% 0;
+                font-size: 1em;
+                @include sm {
+                    font-size: 1.25em;
+                }
+                @include md {
+                    font-size: 1.5em;
+                    padding: 1% 0;
+                }
+                @include lg {
+                    font-size: 2em;
+                }
+            }
+        }
+    }
+
+    .row-6 {
+        max-width: 1366px;
+        margin: 0 auto;
+
+        .grid {
+            display: grid;
+            width: 100%;
+            grid-template-columns: auto;
+            grid-template-rows: auto repeat(8, 300px) auto;
+
+            @include sm {
+                grid-template-columns: auto auto;
+                grid-template-rows: auto 300px 300px 300px 300px auto;
+            }
+
+            @include md {
+            }
+
+            @include lg {
+                grid-template-columns: auto auto auto;
+                grid-template-rows: repeat(4, auto);
+            }
+
+            @include xl {
+                grid-template-columns: repeat(12, 8.33%);
+                grid-template-rows: repeat(4, auto);
+                grid-template-areas:
+                    "item1 item1 item1 item1 item1 item1 item1 item1 item10 item10 item10 item10"
+                    "item2 item2 item2 item2 item3 item3 item3 item3 item10 item10 item10 item10"
+                    "item4 item4 item4 item4 item5 item5 item5 item5 item10 item10 item10 item10"
+                    "item6 item6 item6 item7 item7 item7 item8 item8 item8 item9 item9 item9";
+            }
+
+            .item:nth-of-type(1) {
+                background: map-get($colors, row-6-item-1);
+                @include sm {
+                    grid-column: 1 / span 2;
+                }
+
+                @include xl {
+                    grid-area: item1;
+                }
+            }
+            .item:nth-of-type(10) {
+                background: map-get($colors, row-6-item-10);
+                @include sm {
+                    grid-column: 1 / span 2;
+                }
+                @include lg {
+                    grid-column: 2 / span 2;
+                }
+                @include xl {
+                    grid-area: item10;
+                }
+                h3 {
+                    font-size: 2em;
+                    @include sm {
+                        font-size: 3em;
+                    }
+                }
+                strong {
+                    font-size: 1.25em;
+                    @include lg {
+                        font-size: 1.5em;
+                    }
+                }
+                ul li {
+                    display: inline-block;
+                    width: auto;
+                    vertical-align: middle;
+                    @include lg {
+                        padding: 3% auto;
+                    }
+                }
+                ul li:nth-of-type(2n + 1) {
+                    font-size: 2.5em;
+                    width: 50px;
+
+                    @include xl {
+                        font-size: 3em;
+                    }
+                }
+
+                ul li:nth-of-type(2n + 2) {
+                    font-size: 1.25em;
+                    @include xl {
+                        font-size: 1.5em;
+                    }
+                }
+            }
+            .item:nth-of-type(2) {
+                background: map-get($colors, row-6-item-2);
+                @include xl {
+                    grid-area: item2;
+                }
+            }
+            .item:nth-of-type(3) {
+                background: map-get($colors, row-6-item-3);
+                @include xl {
+                    grid-area: item3;
+                }
+            }
+            .item:nth-of-type(4) {
+                background: map-get($colors, row-6-item-4);
+                @include xl {
+                    grid-area: item4;
+                }
+            }
+            .item:nth-of-type(5) {
+                background: map-get($colors, row-6-item-5);
+                @include xl {
+                    grid-area: item5;
+                }
+            }
+            .item:nth-of-type(6) {
+                background: map-get($colors, row-6-item-6);
+                @include xl {
+                    grid-area: item6;
+                }
+            }
+            .item:nth-of-type(7) {
+                background: map-get($colors, row-6-item-7);
+                @include xl {
+                    grid-area: item7;
+                }
+            }
+            .item:nth-of-type(8) {
+                background: map-get($colors, row-6-item-8);
+                @include xl {
+                    grid-area: item8;
+                }
+            }
+            .item:nth-of-type(9) {
+                background: map-get($colors, row-6-item-9);
+                @include xl {
+                    grid-area: item9;
+                }
+            }
+        }
+    }
+}
+
+#hero {
+    color: #fff;
+    font-family: "Papyrus", sans-serif;
+    margin-top: -$nav-wrapper-height-xs;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    @include md {
+        margin-top: -$nav-wrapper-height-md;
+    }
+    h1 {
+        font-size: 4em;
+        letter-spacing: 0.1em;
+        @include sm {
+            font-size: 5em;
+        }
+    }
+
+    h2 {
+        font-size: 1.5em;
+        @include sm {
+            font-size: 2em;
+        }
+    }
+}
+
+.home-row-2-heading {
+    z-index: 3;
+    h2 {
+        font-size: 2em;
+        @include sm {
+            font-size: 3em;
+        }
+    }
+    ul li {
+        font-size: 1.25em;
+        @include sm {
+            font-size: 1.5em;
+        }
+    }
+}
