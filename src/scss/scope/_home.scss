@@ -315,6 +315,7 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 
     @include md {
         margin-top: -$nav-wrapper-height-md;
