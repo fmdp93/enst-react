@@ -20,16 +20,18 @@ const Contacts = ({ classes }: { classes: ClassesType }) => {
                         </div>
                     </div>
                     <table className="table">
-                        <tr>
-                            <th><strong>Telephone Number</strong></th>
-                            <td>(02) 696-9858</td>
-                        </tr>
-                        <tr>
-                            <th><strong>E&minus;mail</strong></th>
-                            <td>
-                                enstreatment@yahoo.com
-                            </td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <th><strong>Telephone Number</strong></th>
+                                <td>(02) 696-9858</td>
+                            </tr>
+                            <tr>
+                                <th><strong>E&minus;mail</strong></th>
+                                <td>
+                                    enstreatment@yahoo.com
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
 
                 </div>
