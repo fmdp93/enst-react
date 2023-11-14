@@ -27,10 +27,10 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-12 col-lg-6  h-100">
+                    <div className="col-12 col-lg-6">
                         <div className="col-2-bg"></div>
                         <div className="col-2-bg-overlay"></div>
-                        <div className="row h-100">
+                        <div className="row">
                             <div className={home_row_2_heading}>
                                 <h2>Are you looking for a</h2>
                                 <ul>
