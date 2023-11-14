@@ -4,6 +4,8 @@
 
 @import "./component/header";
 @import "./scope/home";
+@import "./scope/contact-us";
+@import "./scope/sitemap";
 
 html {
     background: rgb(18, 45, 10);
@@ -22,26 +24,4 @@ body,
 main {
     height: 100%;
     font-family: "Gilroy";
-}
-
-#map-wrapper {
-    position: relative;
-    height: 0;
-}
-
-#map-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-#contact-us {
-    max-width: 1366px;
-    margin: 0 auto;
-}
-
-#site-map {
-    max-width: 1366px;
-    margin: 0 auto;
 }
