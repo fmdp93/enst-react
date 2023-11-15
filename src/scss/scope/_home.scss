@@ -317,6 +317,8 @@
     align-items: center;
     text-align: center;
     min-height: 100vh;
+    position: relative;
+    z-index: 100;    
 
     @include md {
         margin-top: -$nav-wrapper-height-md;
@@ -334,6 +336,19 @@
         @include sm {
             font-size: 2em;
         }
+    }
+
+    h1, h2{
+        position: relative;
+        z-index: 99;
+    }
+    & .overlay {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        z-index: 98;
+        background-color: map-get($map: $colors, $key: home-bg-overlay);
+        opacity: 0.5;
     }
 }
 
