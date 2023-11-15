@@ -10,6 +10,6 @@ export default defineConfig({
     devSourcemap: true,
   },
   build: {
-    outDir: "./public"
-  }
+    outDir: "./dist",        
+  },
 })

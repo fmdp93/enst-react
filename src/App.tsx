@@ -1,6 +1,8 @@
 import './css/reset.css'
 import './css/bootstrap.min.css'
 import './scss/style.scss'
+import 'jquery'
+import 'bootstrap'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './Home'
 import Contacts from './Contacts'
