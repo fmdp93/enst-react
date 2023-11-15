@@ -17,7 +17,7 @@ const Nav = () => {
     }
 
     return (        
-        <div className={`container-sm-fluid nav-wrapper ${loc.pathname.replace('/', '') || "home"}`}>            
+        <div className={`container-sm-fluid nav-wrapper ${loc.pathname.substring(1) || "home"}`}>            
             <nav className="navbar navbar-expand-sm navbar-light px-md-4">
                 <Link to={navLinks[0].to} className="navbar-brand mt-sm-2">ENST</Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
