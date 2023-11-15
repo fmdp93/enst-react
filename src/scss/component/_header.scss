@@ -2,11 +2,17 @@
     grid-area: 1 / 1 / 2 / 3;
     font-size: 1.5em;
     height: $nav-wrapper-height-xs;
-    background: map-get($colors, nav-bg-color);
+    color: #fff;
+    position: relative;
+    z-index: 999;
+    
     @include md {
         height: $nav-wrapper-height-md;
     }
 
+    &:not(.home){
+        background: map-get($colors, nav-bg-color);
+    }
     nav {
         text-align: center;
         background: map-get($colors, nav-bg-color);
@@ -40,6 +46,7 @@
     .nav-link:visited {
         color: #fff;
     }
+    .nav-link:focus,
     .nav-link:hover,
     .nav-link:active {
         color: #fff !important;
