@@ -4,10 +4,8 @@ const Home = () => {
 
     return (
         <div className="enst-home-container">
-            {/* <div className="green-bg-overlay">
-
-            </div> */}
             <div className="row-1" id="hero">
+                <div className="overlay"></div>
                 <h1>ENST</h1>
                 <h2>Etheric Nerve Stimulation Treatment</h2>
             </div>

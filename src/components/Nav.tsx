@@ -1,8 +1,9 @@
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Nav = () => {
     const refNavbarToggler = useRef<HTMLInputElement>(null);
+    const loc = useLocation();
 
     const navLinks = [
         { to: "/", label: "Home" },
@@ -15,8 +16,8 @@ const Nav = () => {
         navbar?.classList.remove('show');
     }
 
-    return (
-        <div className="container-sm-fluid nav-wrapper">
+    return (        
+        <div className={`container-sm-fluid nav-wrapper ${loc.pathname.replace('/', '') || "home"}`}>            
             <nav className="navbar navbar-expand-sm navbar-light px-md-4">
                 <Link to={navLinks[0].to} className="navbar-brand mt-sm-2">ENST</Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
