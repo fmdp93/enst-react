@@ -20,7 +20,7 @@
         background-image: url("../assets/img/1080p bg.jpg");
         background-size: cover;
         height: 100%;
-        background-blend-mode: hard-light;
+        background-position: center;
 
         @include md {
             grid-template-rows: $nav-wrapper-height-md 50% auto;
