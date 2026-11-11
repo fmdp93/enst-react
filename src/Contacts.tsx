@@ -15,7 +15,7 @@ const Contacts = ({ classes }: { classes: ClassesType }) => {
                         <div className={classes.col_1_row_col_2}>
                             <h1>Contacts</h1>
                             <p>
-                                Our clinic hours is from 8:00 A.M. to 4:00 PM Tuesdays to Sundays except Mondays.
+                                Our clinic hours is from 8:00 A.M. to 4:00 PM Monday to Saturday.
                             </p>
                         </div>
                     </div>
